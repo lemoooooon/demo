@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url:  jdbc:mariadb://tencent:3306/sakila
+    username: root
+    password: 123456
+    driver-class-name: org.mariadb.jdbc.Driver
+    initialization-mode: always
+    schema:
+      - classpath:sakila-schema.sql
+      - classpath:sakila-data.sql
+  jpa:
+    database-platform: org.hibernate.dialect.MariaDBDialect
+    defer-datasource-initialization: true
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+

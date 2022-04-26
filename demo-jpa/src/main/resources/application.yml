@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://tencent:3306/employees
+    username: root
+    password: 123456
+    driver-class-name: org.mariadb.jdbc.Driver
