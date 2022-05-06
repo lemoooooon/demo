@@ -5,10 +5,14 @@ import org.example.repository.EmployeeRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 
 import java.sql.Date;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @SpringBootApplication
 public class RepositoryApplication implements CommandLineRunner {
@@ -32,5 +36,11 @@ public class RepositoryApplication implements CommandLineRunner {
         employee.setGender("Male");
         repository.save(employee);
         System.out.println(repository.sumEmployeeNoByGender("Male"));
+        System.out.println(repository.findEmployeeByEmpNo(2));
+
+        Pageable pageable = new PageRequest(2, 10, Sort.Direction.ASC, "lastname", "firstname");
+        repository.findAllByLastNameIsLike("San", pageable);
+        Sort sort = new Sort(Sort.Direction.DESC, "Matthews");
+        List<Employee> result = repository.findAllByEmpNo(2, sort);
     }
 }
