@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.dao.EmployeesRepository;
+import org.example.repository.EmployeesRepository;
 import org.example.model.Employees;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
