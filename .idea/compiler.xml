@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="demo-security-h2" />
         <module name="demo-repository-h2" />
+        <module name="demo-data-jpa" />
         <module name="demo-jpa" />
         <module name="demo-application" />
         <module name="demo-h2" />

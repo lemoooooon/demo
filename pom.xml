@@ -16,6 +16,7 @@
         <module>demo-security-hello-world</module>
         <module>demo-security-h2</module>
         <module>demo-repository-h2</module>
+        <module>demo-data-jpa</module>
     </modules>
 
     <properties>
